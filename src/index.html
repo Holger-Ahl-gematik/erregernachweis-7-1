@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <!-- Required meta tags -->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <!-- Metro UI -->
+        <link rel="stylesheet" href="https://cdn.korzh.com/metroui/v4/css/metro-all.min.css"/>
+        <link rel="stylesheet" href="https://cdn.korzh.com/metroui/v4/css/metro-icons.css" >
+        <link rel="stylesheet" href="css/style.css"/>
+        <!--
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cdbootstrap/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cdbootstrap/css/cdb.min.css"/>
+        <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous" />
+        -->
+        <title>§7.1</title>
+    </head>
+    <body>
+        <div id="app"></div>
+
+        <div class="d-flex flex-row pb-5">
+            <div class="d-flex flex-row">
+                <ul class="h-menu">
+                    <li><a href="#"><img src="img/DEMIS_Logo.png" class="pr-2" width="30px"/>DEMIS</a></li>
+                    <li><a href="#">COVID-19</a></li>
+                    <li><a href="#">Meldepflichtige Krankheiten</a></li>
+                    <li><a href="#">Bettenbelegung</a></li>
+                    <li><a href="#"><span style="width: 55px;" class="p-2 border-bottom bd-dark">Erregernachweis melden</span></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="d-flex flex-row">
+            <div class="w-auto pr-10 pl-10">
+                <h1>Erregernach-<br/>weis melden</h1>
+                <p>Testergebnis gemäß<br/> Infektionsschutzgesetz (IfSG) melden</p>
+                <ul class="custom-list-marker">
+                    <li>
+                        <img class="p-3" src="img/checkmark.png"/>
+                        <span class="label">Einrichtung</span>
+                    </li>
+                    <li>
+                        <img class="p-3" src="img/checkmark.png"/>
+                        <span class="label">Betroffene Person</span>
+                    </li>
+                    <li>
+                        <img class="p-3" src="img/checkmark.png"/>
+                        <span class="label">Erreger wählen</span>
+                    </li>
+                    <li>
+                        <img class="p-3" src="img/checkhalf.png"/>
+                        <span class="label">Diagnostik</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="w-auto pr-10 pl-10">
+                <p class="pt-5"><span style="width: 55px; border: 2px solid; border-radius: 15px" class="p-1 bd-dark">
+                    Schritt 4 von 4
+                </span></p>
+                <h1 class="pb-5 pt-4">Influenzavirus; Meldepflicht nur für den direkten Nachweis</h1>
+
+                <h2 class="pt-5">Diagnostik</h2>
+
+                <div class="pb-2">
+                    <label for="Probendatum">Eingangsdatum der Probe*</label>
+                    <input id="Probendatum"  type="text" data-role="calendarpicker" data-format="DD.MM.YY" value="2023/04/17">
+                </div>
+
+                <label for="material"><a href="https://simplifier.net/demis/materialinvp" target="popup">Material*</a></label>
+                <input type="text" id="material" data-role="input" title="ValueSet 'MaterialXXXP'"
+                       data-autocomplete="Bronchoalveolar lavage fluid sample (specimen),Bronchial biopsy sample (specimen),Bronchial fluid sample (specimen),Conjunctival swab (specimen),Specimen from conjunctiva (specimen),Specimen from cornea (specimen),Swab from cornea (specimen),Cerebrospinal fluid sample (specimen),Microbial isolate specimen (specimen),Nasopharyngeal swab (specimen),Pericardial fluid specimen (specimen),Respiratory fluid specimen (specimen),Specimen from nasopharyngeal structure (specimen),Specimen from nose (specimen),Specimen from throat (specimen),Throat swab (specimen),Lower respiratory sample (specimen),Upper respiratory sample (specimen),Sputum specimen obtained by aspiration from trachea (specimen),Sputum specimen (specimen),Specimen from trachea (specimen),Specimen from trachea obtained by aspiration (specimen)">
+                <p/>
+                <label for="method"><a href="https://simplifier.net/demis/method-duplicate-2/~overview" target="popup">Methode*</a></label>
+                <input type="text"  id="method" data-role="input" title="ValueSet 'Method'"
+                       data-autocomplete="Acid fast stain method (procedure), Administration of substance to produce immunity; either active or passive (procedure), Agglutination assay (procedure), Antibody titer measurement (procedure), Antigen assay (procedure), Antinuclear antibody measurement (procedure), Antiviral susceptibility test (procedure), Bacterial bacteriophage typing (procedure), Bacterial culture (procedure), Bioassay (procedure), Coliform bacteria viability count (procedure), Complement component; antigen measurement (procedure), Complement fixation test (procedure), Confirmatory technique (qualifier value), Coombs test - anti-human globulin (procedure), Counterimmunoelectrophoresis measurement (procedure), Disk diffusion susceptibility test (procedure), Electron microscopy; diagnostic (procedure), Enzyme immunoassay method (procedure), Fatty acid measurement (procedure), Fluorescence in situ hybridization (procedure),  Fluorescence polarization immunoassay (procedure), Genotype determination (procedure), Giemsa stain method (procedure), Gradient strip susceptibility test (procedure), Hemagglutination assay (procedure), Hemagglutination inhibition assay (procedure), Immunoassay method (procedure), Immunoblot assay (procedure), Immunocytochemical stain (procedure), Immunodiffusion measurement (procedure), Immunofluorescent stain method (procedure), Immunoglobulin A measurement (procedure), Immunoglobulin G measurement (procedure), Immunoglobulin M measurement (procedure), Latex agglutination test (procedure), Light microscopy (procedure),  Mass spectrometry measurement (procedure), Measurement of microbial antibody (procedure), Microbial culture (procedure), Molecular genetics procedure (procedure), Mouse toxin neutralization test (procedure), Nucleic acid amplification (procedure), Nucleic acid assay (procedure), Nucleic acid hybridization procedure (procedure), Nucleic acid probe method with target amplification (procedure), Nucleic acid sequencing (procedure), Orcein stain method (procedure), Organism specific culture (procedure), Phenotype determination (procedure), Polyacrylamide gel electrophoresis (procedure),  Radioimmunoassay (procedure), Rapid immunoassay technique (qualifier value), Restriction fragment length polymorphism analysis (procedure), Viral culture (procedure), Viral neutralization test (procedure), Viral Sequencing (procedure), Affinity chromatography measurement (procedure), Modified carbapenem inactivation technique (qualifier value), Point of care testing (procedure), Agar dilution minimum inhibitory concentration susceptibility test for anaerobes (procedure)">
+                <p/>
+                <label for="organism"><a href="https://simplifier.net/demis/laboratorytestinvp" target="popup">Erreger*</a></label>
+                <input type="text" id="organism" data-role="input" title="ValueSet 'AnswerSetXXXP' (SNOMDED)"
+                       data-autocomplete="Influenza A virus; not subtype H1 and not subtype H3 (organism),Influenza A virus; not subtype H1N1 (organism),Influenza A virus (organism),Influenza A virus A/Bangkok/1/79 (H3N2) (organism),Influenza A virus A/Bangkok/2/79 (H3N2) (organism),Influenza A virus A/England/42/72 (H3N2) (organism),Influenza A virus A/Hong Kong/1/68 (H3N2) (organism),Influenza A virus A/Leningrad/385/80 (H3N2) (organism),Influenza A virus A/Leningrad/621/86 (H1N1) (organism),Influenza A virus A/Leningrad/624/86 (H1N1) (organism),Influenza A virus A/Mississippi/1/85 (H3N2) (organism),Influenza A virus A/Philippines/2/82 (H3N2) (organism),Influenza A virus A/Port Chalmers/1/73 (H3N2) (organism),Influenza A virus A/Texas/1/77 (H3N2) (organism),Influenza A virus A/Victoria/3/75 (H3N2) (organism),Influenza A virus subtype H1 (organism),Influenza A virus subtype H10 (organism),Influenza A virus subtype H10N7 (organism),Influenza A virus subtype H10N8 (organism),Influenza A virus subtype H1N1 (organism),Influenza A virus subtype H1N2 (organism),Influenza A virus subtype H2 (organism),Influenza A virus subtype H2N2 (organism),Influenza A virus subtype H3 (organism),Influenza A virus subtype H3N2 (organism),Influenza A virus subtype H3N2v (organism),Influenza A virus subtype H3N8 (organism),Influenza A virus subtype H5 (organism),Influenza A virus subtype H5N1 (organism),Influenza A virus subtype H5N8 (organism),Influenza A virus subtype H7 (organism),Influenza A virus subtype H7N2 (organism),Influenza A virus subtype H7N3 (organism),Influenza A virus subtype H7N7 (organism),Influenza A virus subtype H7N9 (organism),Influenza A virus subtype H9 (organism),Influenza A virus subtype H9N2 (organism),Influenza A virus subtype N1 (organism),Influenza A virus subtype N2 (organism),Influenza B virus (organism),Influenza B virus Malaysia lineage (organism),Influenza B virus Victoria lineage (organism),Influenza B virus Yamagata lineage (organism),Influenza B virus/Shanghai/361/2002 (organism),Influenza C virus (organism),Influenza D virus (organism),Influenza virus (organism)">
+                <p/>
+
+                <!--
+                <div>
+                    <legend>Ergebnis:</legend>
+                    <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
+                       data-caption="Positiver Nachweis">
+                    <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
+                       data-caption="Negativer Nachweis" >
+                    <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
+                       data-caption="Nachweis nicht eindeutig" >
+                </div>
+        -->
+        <div class="pb-4">
+        <input id="quantity" type="checkbox" data-role="check-box" data-style="2"
+               data-cls-caption="text-bold" data-cls-check="bd-blue checkbox"
+               data-caption="Es liegen quantitative Ergebnisse vor" onclick="showQuantity(this)"></input>
+    </div>
+    <div>
+        <h3>Ergebnis des Erregernachweises:</h3>
+        <div id="result" data-role="buttongroup" data-group-type="one-state" data-cls-active="bg-blue">
+            <span class="pr-2"><button class="button rounded text-bold p-2">POSITIV<span class="mif-plus pl-2"></span></button></span>
+            <span class="pr-2 pl-2"><button class="button rounded text-bold p-2">NEGATIV<span class="mif-minus pl-2"></span></button></span>
+            <span class="pl-2"><button class="button rounded text-bold p-2">NICHT EINDEUTIG<span class="mif-question pl-2"></span></button></span>
+        </div>
+    </div>
+
+            </div>
+        </div>
+
+
+        <script>
+            function showQuantity(element) {
+                var checkBox = element;
+                var result = document.getElementById("result");
+                if (checkBox.checked == true){
+                    result.style.display = "none";
+                } else {
+                    result.style.display = "block";
+                }
+            }
+            function stepperMethod (m){
+                var stepper = Metro.getPlugin('#stepper','stepper');
+                stepper[m]();
+            }
+        </script>
+
+        <script src="https://cdn.korzh.com/metroui/v4/js/metro.min.js"></script>
+    </body>
+</html>

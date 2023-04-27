@@ -1,0 +1,29 @@
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+.btn-checked::before {
+  border-color: #2d89ef !important;
+  background: #2d89ef !important;
+}
+
+.checkbox::before {
+  border-color: #0b98da !important;
+}

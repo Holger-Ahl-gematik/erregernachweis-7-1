@@ -80,7 +80,7 @@
           </li>
           <li>
             <img class="p-3" src="img/checkmark.png" />
-            <span class="label">Erreger wählen</span>
+            <span class="label">Meldetatbestand</span>
           </li>
           <li>
             <img class="p-3" src="img/checkhalf.png" />
@@ -99,26 +99,56 @@
           Influenzavirus; Meldepflicht nur für den direkten Nachweis
         </h1>
 
+        
+        <h2 class="pt-5">Probe</h2>
+
+        <div class="pb-2">
+          <div class="pb-1">
+            <label for="Probendatum">Probenentnahmedatum</label>
+          </div>
+          <input id="Probendatum"  type="text" data-role="calendarpicker" data-format="DD.MM.YY"   data-max-date="2023/05/04"/>
+        </div>
+
+        <div class="pb-2">
+          <div class="pb-1">
+            <label for="Date">Eingangsdatum der Probe*</label>
+          </div>
+          <input id="Date"  type="text" data-role="calendarpicker" data-format="DD.MM.YY"   data-max-date="2023/05/04"/>
+        </div>
+
+        <div class="pb-2">
+          <label for="material">
+              <a href="https://simplifier.net/demis/materialinvp" target="popup">Material*</a>
+          </label >
+          <input
+          type="text"
+          id="material"
+          data-role="input"
+          title="ValueSet 'MaterialINVP'"
+          data-autocomplete="Bronchoalveolar lavage fluid sample (specimen),Bronchial biopsy sample (specimen),Bronchial fluid sample (specimen),Conjunctival swab (specimen),Specimen from conjunctiva (specimen),Specimen from cornea (specimen),Swab from cornea (specimen),Cerebrospinal fluid sample (specimen),Microbial isolate specimen (specimen),Nasopharyngeal swab (specimen),Pericardial fluid specimen (specimen),Respiratory fluid specimen (specimen),Specimen from nasopharyngeal structure (specimen),Specimen from nose (specimen),Specimen from throat (specimen),Throat swab (specimen),Lower respiratory sample (specimen),Upper respiratory sample (specimen),Sputum specimen obtained by aspiration from trachea (specimen),Sputum specimen (specimen),Specimen from trachea (specimen),Specimen from trachea obtained by aspiration (specimen)"
+          />
+       </div>
+
+
+
+
+
+
         <h2 class="pt-5">Diagnostik</h2>
 
         <div class="pb-2">
-            <label>Status der Testergebnisse*</label>
-            <div class="p-2">
-                <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
-                        data-caption="Endgültig" checked>
-                <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
-                data-caption="Vorläufig" >
-                <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
-                data-caption="Ergänzungsmeldung" >
-                <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
-                data-caption="Korrekturmeldung" >
-            </div>
-        </div>
+          <label for="method">
+              <a href="https://simplifier.net/demis/method-duplicate-2/~overview" target="popup">Methode*</a>
+          </label>
+          <input
+          type="text"
+          id="method"
+          data-role="input"
+          title="ValueSet 'Method'"
+          data-autocomplete="Acid fast stain method (procedure), Administration of substance to produce immunity; either active or passive (procedure), Agglutination assay (procedure), Antibody titer measurement (procedure), Antigen assay (procedure), Antinuclear antibody measurement (procedure), Antiviral susceptibility test (procedure), Bacterial bacteriophage typing (procedure), Bacterial culture (procedure), Bioassay (procedure), Coliform bacteria viability count (procedure), Complement component; antigen measurement (procedure), Complement fixation test (procedure), Confirmatory technique (qualifier value), Coombs test - anti-human globulin (procedure), Counterimmunoelectrophoresis measurement (procedure), Disk diffusion susceptibility test (procedure), Electron microscopy; diagnostic (procedure), Enzyme immunoassay method (procedure), Fatty acid measurement (procedure), Fluorescence in situ hybridization (procedure),  Fluorescence polarization immunoassay (procedure), Genotype determination (procedure), Giemsa stain method (procedure), Gradient strip susceptibility test (procedure), Hemagglutination assay (procedure), Hemagglutination inhibition assay (procedure), Immunoassay method (procedure), Immunoblot assay (procedure), Immunocytochemical stain (procedure), Immunodiffusion measurement (procedure), Immunofluorescent stain method (procedure), Immunoglobulin A measurement (procedure), Immunoglobulin G measurement (procedure), Immunoglobulin M measurement (procedure), Latex agglutination test (procedure), Light microscopy (procedure),  Mass spectrometry measurement (procedure), Measurement of microbial antibody (procedure), Microbial culture (procedure), Molecular genetics procedure (procedure), Mouse toxin neutralization test (procedure), Nucleic acid amplification (procedure), Nucleic acid assay (procedure), Nucleic acid hybridization procedure (procedure), Nucleic acid probe method with target amplification (procedure), Nucleic acid sequencing (procedure), Orcein stain method (procedure), Organism specific culture (procedure), Phenotype determination (procedure), Polyacrylamide gel electrophoresis (procedure),  Radioimmunoassay (procedure), Rapid immunoassay technique (qualifier value), Restriction fragment length polymorphism analysis (procedure), Viral culture (procedure), Viral neutralization test (procedure), Viral Sequencing (procedure), Affinity chromatography measurement (procedure), Modified carbapenem inactivation technique (qualifier value), Point of care testing (procedure), Agar dilution minimum inhibitory concentration susceptibility test for anaerobes (procedure)"
+          />
+      </div>
 
-        <div class="pb-2">
-          <label for="Probendatum">Eingangsdatum der Probe*</label>
-          <input id="Probendatum"  type="text" data-role="calendarpicker" data-format="DD.MM.YY"  value="2023/04/17" />
-        </div>
         <div class="pb-2">
           <label for="organism">
               <a href="https://github.com/robert-koch-institut/rki.demis.r4.core/blob/1.24.0-alpha.2/rki.demis.r4.core/MetadataResources/ValueSet/answerSetINVP.xml"
@@ -132,33 +162,18 @@
           />
         </div>
 
-        <div class="pb-2">
-            <label for="material">
-                <a href="https://simplifier.net/demis/materialinvp" target="popup">Material*</a>
-            </label >
-            <input
-            type="text"
-            id="material"
-            data-role="input"
-            title="ValueSet 'MaterialINVP'"
-            data-autocomplete="Bronchoalveolar lavage fluid sample (specimen),Bronchial biopsy sample (specimen),Bronchial fluid sample (specimen),Conjunctival swab (specimen),Specimen from conjunctiva (specimen),Specimen from cornea (specimen),Swab from cornea (specimen),Cerebrospinal fluid sample (specimen),Microbial isolate specimen (specimen),Nasopharyngeal swab (specimen),Pericardial fluid specimen (specimen),Respiratory fluid specimen (specimen),Specimen from nasopharyngeal structure (specimen),Specimen from nose (specimen),Specimen from throat (specimen),Throat swab (specimen),Lower respiratory sample (specimen),Upper respiratory sample (specimen),Sputum specimen obtained by aspiration from trachea (specimen),Sputum specimen (specimen),Specimen from trachea (specimen),Specimen from trachea obtained by aspiration (specimen)"
-            />
+
+
+
+
+        <div class="pb-2 pt-2">
+          <label for="substance">
+            <a href="" target="popup">Analyt</a>
+          </label>
+          <input type="text" id="substance"  data-role="input"  title="ValueSet 'Substance'"
+            data-autocomplete="Anthrax toxin lethal toxin (substance), Anthrax toxin edema factor (substance), Anthrax toxin lethal factor (substance), Protective antigen of anthrax toxin, (substance), Antigen of Hepatitis B virus surface protein (substance), Antigen of Hepatitis B virus e protein (substance), Antigen of Hepatitis B virus core protein (substance), Antigen of Hepatitis C virus core (substance), Antigen of Dengue virus (substance), Antigen of Escherichia coli O157 (substance), Escherichia coli lipopolysaccharide antibody (substance), Shiga toxin 1 (substance), Shiga toxin 2 (substance), Shiga toxin (substance), Clostridial toxin (substance),Clostridium botulinum toxin (substance), Clostridium difficile toxin (substance), Clostridium difficile enterotoxin A (substance), Clostridium difficile toxin B, (substance), Cholera toxin (substance), Diphtheria toxin (substance), Antigen of Escherichia coli O157 (substance), Corynebacterium spp toxin (substance)"
+          />
         </div>
-
-        <div class="pb-2">
-            <label for="method">
-                <a href="https://simplifier.net/demis/method-duplicate-2/~overview" target="popup">Methode*</a>
-            </label>
-            <input
-            type="text"
-            id="method"
-            data-role="input"
-            title="ValueSet 'Method'"
-            data-autocomplete="Acid fast stain method (procedure), Administration of substance to produce immunity; either active or passive (procedure), Agglutination assay (procedure), Antibody titer measurement (procedure), Antigen assay (procedure), Antinuclear antibody measurement (procedure), Antiviral susceptibility test (procedure), Bacterial bacteriophage typing (procedure), Bacterial culture (procedure), Bioassay (procedure), Coliform bacteria viability count (procedure), Complement component; antigen measurement (procedure), Complement fixation test (procedure), Confirmatory technique (qualifier value), Coombs test - anti-human globulin (procedure), Counterimmunoelectrophoresis measurement (procedure), Disk diffusion susceptibility test (procedure), Electron microscopy; diagnostic (procedure), Enzyme immunoassay method (procedure), Fatty acid measurement (procedure), Fluorescence in situ hybridization (procedure),  Fluorescence polarization immunoassay (procedure), Genotype determination (procedure), Giemsa stain method (procedure), Gradient strip susceptibility test (procedure), Hemagglutination assay (procedure), Hemagglutination inhibition assay (procedure), Immunoassay method (procedure), Immunoblot assay (procedure), Immunocytochemical stain (procedure), Immunodiffusion measurement (procedure), Immunofluorescent stain method (procedure), Immunoglobulin A measurement (procedure), Immunoglobulin G measurement (procedure), Immunoglobulin M measurement (procedure), Latex agglutination test (procedure), Light microscopy (procedure),  Mass spectrometry measurement (procedure), Measurement of microbial antibody (procedure), Microbial culture (procedure), Molecular genetics procedure (procedure), Mouse toxin neutralization test (procedure), Nucleic acid amplification (procedure), Nucleic acid assay (procedure), Nucleic acid hybridization procedure (procedure), Nucleic acid probe method with target amplification (procedure), Nucleic acid sequencing (procedure), Orcein stain method (procedure), Organism specific culture (procedure), Phenotype determination (procedure), Polyacrylamide gel electrophoresis (procedure),  Radioimmunoassay (procedure), Rapid immunoassay technique (qualifier value), Restriction fragment length polymorphism analysis (procedure), Viral culture (procedure), Viral neutralization test (procedure), Viral Sequencing (procedure), Affinity chromatography measurement (procedure), Modified carbapenem inactivation technique (qualifier value), Point of care testing (procedure), Agar dilution minimum inhibitory concentration susceptibility test for anaerobes (procedure)"
-            />
-        <div>
-
-
    
 
 
@@ -194,40 +209,105 @@
               ><button class="button rounded text-bold p-2">
                 NEGATIV<span class="mif-minus pl-2"></span></button
             ></span>
-            <span class="pl-2"
-              ><button class="button rounded text-bold p-2">
-                NICHT EINDEUTIG<span class="mif-question pl-2"></span></button
-            ></span>
           </div>
         </div>
 
-        
-        <h3 class="pt-5">????Antigennachweis?????</h3>
-        
-        <div class="pb-2">
-            <label for="substance">
-                <a href="" target="popup">Substanz</a>
-            </label>
-            <input type="text" id="substance"  data-role="input"  title="ValueSet 'Substance'"
-            data-autocomplete="Anthrax toxin lethal toxin (substance), Anthrax toxin edema factor (substance), Anthrax toxin lethal factor (substance), Protective antigen of anthrax toxin, (substance), Antigen of Hepatitis B virus surface protein (substance), Antigen of Hepatitis B virus e protein (substance), Antigen of Hepatitis B virus core protein (substance), Antigen of Hepatitis C virus core (substance), Antigen of Dengue virus (substance), Antigen of Escherichia coli O157 (substance), Escherichia coli lipopolysaccharide antibody (substance), Shiga toxin 1 (substance), Shiga toxin 2 (substance), Shiga toxin (substance), Clostridial toxin (substance),Clostridium botulinum toxin (substance), Clostridium difficile toxin (substance), Clostridium difficile enterotoxin A (substance), Clostridium difficile toxin B, (substance), Cholera toxin (substance), Diphtheria toxin (substance), Antigen of Escherichia coli O157 (substance), Corynebacterium spp toxin (substance)"
-            />
-        <div>
+    <div id="weitere" class="pt-5" style="display: none">
+      
+      <h2 class="pt-5">Weitere Diagnostik bezogen auf gleiche Probe<span class="mif-bin pl-5 pos-right-bottom" onclick="hideAdditional(this)"></span></h2>
+
+      <div class="pb-2">
+        <label for="method2">
+            <a href="https://simplifier.net/demis/method-duplicate-2/~overview" target="popup">Methode*</a>
+        </label>
+        <input type="text" id="method2" data-role="input"  title="ValueSet 'Method'"
+        data-autocomplete="Acid fast stain method (procedure), Administration of substance to produce immunity; either active or passive (procedure), Agglutination assay (procedure), Antibody titer measurement (procedure), Antigen assay (procedure), Antinuclear antibody measurement (procedure), Antiviral susceptibility test (procedure), Bacterial bacteriophage typing (procedure), Bacterial culture (procedure), Bioassay (procedure), Coliform bacteria viability count (procedure), Complement component; antigen measurement (procedure), Complement fixation test (procedure), Confirmatory technique (qualifier value), Coombs test - anti-human globulin (procedure), Counterimmunoelectrophoresis measurement (procedure), Disk diffusion susceptibility test (procedure), Electron microscopy; diagnostic (procedure), Enzyme immunoassay method (procedure), Fatty acid measurement (procedure), Fluorescence in situ hybridization (procedure),  Fluorescence polarization immunoassay (procedure), Genotype determination (procedure), Giemsa stain method (procedure), Gradient strip susceptibility test (procedure), Hemagglutination assay (procedure), Hemagglutination inhibition assay (procedure), Immunoassay method (procedure), Immunoblot assay (procedure), Immunocytochemical stain (procedure), Immunodiffusion measurement (procedure), Immunofluorescent stain method (procedure), Immunoglobulin A measurement (procedure), Immunoglobulin G measurement (procedure), Immunoglobulin M measurement (procedure), Latex agglutination test (procedure), Light microscopy (procedure),  Mass spectrometry measurement (procedure), Measurement of microbial antibody (procedure), Microbial culture (procedure), Molecular genetics procedure (procedure), Mouse toxin neutralization test (procedure), Nucleic acid amplification (procedure), Nucleic acid assay (procedure), Nucleic acid hybridization procedure (procedure), Nucleic acid probe method with target amplification (procedure), Nucleic acid sequencing (procedure), Orcein stain method (procedure), Organism specific culture (procedure), Phenotype determination (procedure), Polyacrylamide gel electrophoresis (procedure),  Radioimmunoassay (procedure), Rapid immunoassay technique (qualifier value), Restriction fragment length polymorphism analysis (procedure), Viral culture (procedure), Viral neutralization test (procedure), Viral Sequencing (procedure), Affinity chromatography measurement (procedure), Modified carbapenem inactivation technique (qualifier value), Point of care testing (procedure), Agar dilution minimum inhibitory concentration susceptibility test for anaerobes (procedure)"/>
+      </div>
+
+  
+      <div class="pb-2 pt-2">
+         <label for="substance2">
+          <a href="" target="popup">Analyt</a>
+        </label>
+        <input type="text" id="substance2"  data-role="input"  title="ValueSet 'Substance'"
+        data-autocomplete="Anthrax toxin lethal toxin (substance), Anthrax toxin edema factor (substance), Anthrax toxin lethal factor (substance), Protective antigen of anthrax toxin, (substance), Antigen of Hepatitis B virus surface protein (substance), Antigen of Hepatitis B virus e protein (substance), Antigen of Hepatitis B virus core protein (substance), Antigen of Hepatitis C virus core (substance), Antigen of Dengue virus (substance), Antigen of Escherichia coli O157 (substance), Escherichia coli lipopolysaccharide antibody (substance), Shiga toxin 1 (substance), Shiga toxin 2 (substance), Shiga toxin (substance), Clostridial toxin (substance),Clostridium botulinum toxin (substance), Clostridium difficile toxin (substance), Clostridium difficile enterotoxin A (substance), Clostridium difficile toxin B, (substance), Cholera toxin (substance), Diphtheria toxin (substance), Antigen of Escherichia coli O157 (substance), Corynebacterium spp toxin (substance)" />
+      </div>
+
+      <div class="pt-5 bb-5">
+        <h3>Ergebnis des Erregernachweises:</h3>
+        <div id="result2" data-role="buttongroup"  data-group-type="one-state" data-cls-active="bg-blue">
+          <span class="pr-2">
+            <button class="button rounded text-bold p-2">POSITIV<span class="mif-plus pl-2"></span></button>
+          </span>
+          <span class="pr-2 pl-2">
+            <button class="button rounded text-bold p-2">NEGATIV<span class="mif-minus pl-2"></span></button>
+          </span>
+        </div>
       </div>
     </div>
 
+    
+    <div class="pt-5">
+      <span class="pt-5">
+        <button class="button rounded text-bold p-2" onclick="showAdditional(this)">
+          <span class="mif-plus pl-2 pr-3"></span> Weitere Ergebnisse hinzufügen
+        </button>
+      </span>
+    </div>
+
+
+    <h2 class="pt-5">Befund</h2>
+    <div class="pb-2 pt-2">
+      <label>Status*</label>
+      <div class="p-2">
+          <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
+                  data-caption="Endgültig" checked>
+          <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
+          data-caption="Vorläufig" >
+          <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
+          data-caption="Ergänzungsmeldung" >
+          <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
+          data-caption="Korrekturmeldung" >
+      </div>
+    </div>
+
+    <div class="pb-2 pt-2 visible">
+      <label for="Hinweise">
+        <a href="" target="popup">Interpration des Befundes, evtl. zusätzliche Informationen</a>
+      </label>
+      <textarea id="Hinweise" data-role="textarea" data-prepend="<span class='mif-info'></span>"></textarea>
+    </div>
+
+  </div>
+
     <script>
-      function showQuantity(element) {
-        var checkBox = element;
-        var result = document.getElementById('result');
-        if (checkBox.checked == true) {
-          result.style.display = 'none';
-        } else {
-          result.style.display = 'block';
-        }
+      function showAdditional(element) {
+          var checkBox = element;
+          var div = document.getElementById('weitere');
+          div.style.display = 'block';
+          /*
+          if (checkBox.checked == true) {
+            result.style.display = 'none';
+          } else {
+            result.style.display = 'block';
+          }
+          */
+      }
+      function hideAdditional(element) {
+          var checkBox = element;
+          var div = document.getElementById('weitere');
+          div.style.display = 'none';
+          /*
+          if (checkBox.checked == true) {
+            result.style.display = 'none';
+          } else {
+            result.style.display = 'block';
+          }
+          */
       }
       function stepperMethod(m) {
-        var stepper = Metro.getPlugin('#stepper', 'stepper');
-        stepper[m]();
+          var stepper = Metro.getPlugin('#stepper', 'stepper');
+          stepper[m]();
       }
     </script>
 

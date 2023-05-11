@@ -1,3 +1,9 @@
+html,
+body {
+  height: 100%;
+  background-color: white;
+}
+
 h1,
 h2,
 h3,
@@ -17,6 +23,27 @@ h2 {
 
 h3 {
   font-size: 18px;
+}
+
+#header {
+  background-color: white;
+}
+
+#holder {
+  min-height: 100%;
+  position: relative;
+}
+
+#body {
+}
+
+#footer {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  width: 100%;
+  background-color: white;
 }
 
 .btn-checked::before {

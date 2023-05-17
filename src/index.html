@@ -201,8 +201,6 @@
                 data-caption="Positiv">
               <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
                 data-caption="Negativ" >
-              <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
-                data-caption="nicht eindeutig" >
             </div>
 
 
@@ -233,8 +231,6 @@
                   data-caption="Positiv">
                 <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
                   data-caption="Negativ" >
-                <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
-                  data-caption="nicht eindeutig" >
               </div>
             </div>
 
@@ -253,14 +249,21 @@
               <label>Status*</label>
               <div class="p-2">
                   <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
-                          data-caption="Endgültig">
+                          data-caption="Endgültig" onclick="hideRelatesTo(this)">
                   <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
-                  data-caption="Vorläufig" >
+                  data-caption="Vorläufig" onclick="hideRelatesTo(this)">
                   <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
-                  data-caption="Ergänzung" >
+                  data-caption="Ergänzung" onclick="showRelatesTo(this)" >
                   <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
-                  data-caption="Korrektur" >
+                  data-caption="Korrektur" onclick="showRelatesTo(this)">
               </div>
+            </div>
+
+
+            <div id="relates-to" style="display: none">
+              <legend>bezieht sich auf Meldungs-ID:</legend>
+              <input name="relates-to" type="text" data-role="input"/> 
+                
             </div>
 
             <div class="pb-2 pt-2 visible">
@@ -301,6 +304,7 @@
           </div>
         </div>
 
+
       </div>
     </div>
 
@@ -309,6 +313,30 @@
           var checkBox = element;
           var div = document.getElementById('weitere');
           div.style.display = 'block';
+          /*
+          if (checkBox.checked == true) {
+            result.style.display = 'none';
+          } else {
+            result.style.display = 'block';
+          }
+          */
+      }
+      function showRelatesTo(element) {
+          var checkBox = element;
+          var div = document.getElementById('relates-to');
+          div.style.display = 'block';
+          /*
+          if (checkBox.checked == true) {
+            result.style.display = 'none';
+          } else {
+            result.style.display = 'block';
+          }
+          */
+      }
+      function hideRelatesTo(element) {
+          var checkBox = element;
+          var div = document.getElementById('relates-to');
+          div.style.display = 'none';
           /*
           if (checkBox.checked == true) {
             result.style.display = 'none';

@@ -259,13 +259,6 @@
               </div>
             </div>
 
-
-            <div id="relates-to" style="display: none">
-              <legend>bezieht sich auf Meldungs-ID:</legend>
-              <input name="relates-to" type="text" data-role="input"/> 
-                
-            </div>
-
             <div class="pb-2 pt-2 visible">
               <label for="Hinweise">
                 <a href="" target="popup">Interpration des Befundes</a>
@@ -274,7 +267,7 @@
             </div>
 
             <div class="pb-2 pt-2 visible">
-            <label for="Meldungs-ID"> <a href="" target="popup">Initiale Meldungs-ID*</a>
+            <label for="Meldungs-ID"> <a href="" target="popup">Initiale Meldungs-ID</a>
             </label>
             <textarea id="Meldungs-ID" data-role="textarea" data-default-value="Meldungs-ID auf die Bezug genommen wird" data-cls-textarea="fg-gray"></textarea>
             <p class="fg-gray">Nur bei Korrektur- oder Ergänzungsmeldungen: Bitte geben Sie die Meldungs-ID der Initialmeldung an, die sie korrigieren oder ergänzen möchten.</p>
@@ -333,20 +326,19 @@
       }
       function showRelatesTo(element) {
           var checkBox = element;
-          var div = document.getElementById('relates-to');
-          div.style.display = 'block';
-          /*
-          if (checkBox.checked == true) {
-            result.style.display = 'none';
+          var div = document.getElementById('Meldungs-ID');
+          div.disabled = false;
+          /*if (checkBox.checked == true) {
+            div.disabled = false;
           } else {
-            result.style.display = 'block';
-          }
-          */
+            div.disabled = true;
+          }*/
+          
       }
       function hideRelatesTo(element) {
           var checkBox = element;
-          var div = document.getElementById('relates-to');
-          div.style.display = 'none';
+          var div = document.getElementById('Meldungs-ID');
+          div.disabled = true;
           /*
           if (checkBox.checked == true) {
             result.style.display = 'none';

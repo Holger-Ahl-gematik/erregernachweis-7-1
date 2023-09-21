@@ -238,24 +238,10 @@
             </div>
 
             
-            <div class="pt-5">
-              <span class="pt-5">
-                <button class="button rounded text-bold p-2" onclick="showAdditional(this)">
-                  Weitere Diagnostik hinzufügen <span class="mif-plus pl-3 pr-2"></span>
-                </button>
-              </span>
-            </div>
 
-            <div class="pt-5">
-              <span class="pt-5">
-                <button class="button rounded text-bold p-2" onclick="showId('Resistenzen')">
-                  Resistenzen hinzufügen <span class="mif-plus pl-3 pr-2"></span>
-                </button>
-              </span>
-            </div>
 
-            <div id="Resistenzen" style="display: none">
-              <h2 class="pt-5">Resistenzen <span class="mif-bin pl-5 pos-right-bottom" onclick="hideId('Resistenzen')"></span></h2>
+            <div id="Resistenz" style="display: none">
+              <h2 class="pt-5">Resistenz <span class="mif-bin pl-5 pos-right-bottom" onclick="hideId('Resistenz')"></span></h2>
               <div class="pb-2 pt-2">
                 <label for="CarbapenemResistance">
                   <a href="" target="popup">Verminderte Empfindlichkeit gegenüber Carbapenemen</a>
@@ -276,7 +262,10 @@
                 <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
                   data-caption="Uneindeutig" >
               </div>
+              </div>
 
+            <div id="Sensitivity" style="display: none">
+              <h2 class="pt-5">Antimikrobielle Empfindlichkeitsprüfun <span class="mif-bin pl-5 pos-right-bottom" onclick="hideId('Sensitivity')"></span></h2>
 
               <div class="pb-2 pt-2">
               <label for="Antimikrobielle">
@@ -302,6 +291,29 @@
 
             </div>
 
+            <div class="pt-5">
+              <span class="pt-5">
+                <button class="button rounded text-bold p-2" onclick="showAdditional(this)">
+                  Weitere Diagnostik hinzufügen <span class="mif-plus pl-3 pr-2"></span>
+                </button>
+              </span>
+            </div>
+
+            <div class="pt-5">
+              <span class="pt-5">
+                <button class="button rounded text-bold p-2" onclick="showId('Resistenz')">
+                  Resistenz hinzufügen <span class="mif-plus pl-3 pr-2"></span>
+                </button>
+              </span>
+            </div>            
+
+            <div class="pt-5">
+              <span class="pt-5">
+                <button class="button rounded text-bold p-2" onclick="showId('Sensitivity')">
+                  Carbapenem-Nichtempfindlichkeit hinzufügen <span class="mif-plus pl-3 pr-2"></span>
+                </button>
+              </span>
+            </div>        
 
             <h2 class="pt-5">Befund</h2>
             <div class="pb-2 pt-2">

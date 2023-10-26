@@ -241,7 +241,7 @@
 
 
             <div id="Resistenz" style="display: none">
-              <h2 class="pt-5">Resistenz <span class="mif-bin pl-5 pos-right-bottom" onclick="hideId('Resistenz')"></span></h2>
+              <h2 class="pt-5">Antibiotika-Resistenz <span class="mif-bin pl-5 pos-right-bottom" onclick="hideId('Resistenz')"></span></h2>
               <div class="pb-2 pt-2">
                 <label for="CarbapenemResistance">
                   <a href="" target="popup">Antiobiotika-Resistenz</a>
@@ -255,22 +255,25 @@
               <div class="pt-5">
                 <legend>Ergebnis*:</legend>
                 <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
-                  data-caption="Sensibel">
+                data-caption="Resistent" >              
+               <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
+                data-caption="Sensibel bei erhöhter Exposition" >              
                 <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
-                  data-caption="Resistenz" >
+                data-caption="Intermediär" >
                 <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
-                  data-caption="Intermediär" >
+                data-caption="Sensibel">              
                 <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
-                  data-caption="Uneindeutig" >
+                data-caption="Uneindeutig" >
+                
               </div>
               </div>
 
             <div id="Sensitivity" style="display: none">
-              <h2 class="pt-5">Verminderte Empfindlichkeit gegenüber Carbapenemen<span class="mif-bin pl-5 pos-right-bottom" onclick="hideId('Sensitivity')"></span></h2>
+              <h2 class="pt-5">Nachweis einer Resistenzdeterminante<span class="mif-bin pl-5 pos-right-bottom" onclick="hideId('Sensitivity')"></span></h2>
 
               <div class="pb-2 pt-2">
               <label for="Antimikrobielle">
-                <a href="" target="popup">Verminderte Empfindlichkeit gegenüber Carbapenemen</a>
+                <a href="" target="popup">Nachweis einer Resistenzdeterminante</a>
               </label>
               <input type="text" id="Antimikrobielle"  data-role="input"  title="ValueSet LOINC Antibiotika"
                 data-autocomplete="Bakterielle Carbapenem-Resistenz blaKPC-Gen, Carbapenem-Resistenzgene, Bakterielle Carbapenem-Resistenz blaNDM-Gen, Bakterielle Carbapenem-Resistenz blaIMP-Gen, Bakterielle Carbapenem-Resistenz blaVIM-Gen, Bakterielle Carbapenem-Resistenz blaOXA-48-Gen, Bakterielle Carbapenem-Resistenz blaGES-Gen, Bakterielle Carbapenem-Resistenz blaOXA-23-ähnliches Gen, Bakterielle Carbapenem-Resistenz blaOXA-24-ähnliches Gen, Bakterielle Carbapenem-Resistenz blaOXA-48-ähnliches Gen, Bakterielle Carbapenem-Resistenz blaOXA-58-ähnliches Gen, Bakterielle Carbapenem-Resistenz blaSPM-Gen, Bakterielle Carbapenem-Resistenz blaGIM-Gen, Bakterielle Carbapenem-Resistenz blaOXA-Gen, Bakterielle Carbapenem-Resistenz blaOXA-134-ähnliches Gen, Bakterielle Carbapenem-Resistenz blaOXA-51-ähnliches Gen, Bakterielle Carbapenem-Resistenz blaOXA-143-Gen" 
@@ -281,13 +284,11 @@
             <div class="pt-5">
               <legend>Ergebnis*:</legend>
               <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
-                data-caption="Sensibel">
+              data-caption="Nachgewiesen">
               <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
-                data-caption="Resistenz" >
+              data-caption="Nicht nachgewiesen" >
               <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
-                data-caption="Intermediär" >
-              <input name="result" type="radio" data-role="radio" data-style="2" data-cls-caption="text-bold" data-cls-check="bd-blue btn-checked"
-                data-caption="Uneindeutig" >
+              data-caption="Uneindeutig" >
             </div>
 
 
@@ -304,7 +305,7 @@
             <div class="pt-5">
               <span class="pt-5">
                 <button class="button rounded text-bold p-2" onclick="showId('Resistenz')">
-                  Resistenz hinzufügen <span class="mif-plus pl-3 pr-2"></span>
+                  Antibiotika-Resistenz hinzufügen <span class="mif-plus pl-3 pr-2"></span>
                 </button>
               </span>
             </div>            
@@ -312,7 +313,7 @@
             <div class="pt-5">
               <span class="pt-5">
                 <button class="button rounded text-bold p-2" onclick="showId('Sensitivity')">
-                Nachweis einer Carbapenemase hinzufügen <span class="mif-plus pl-3 pr-2"></span>
+                Nachweis einer Resistenzdeterminante hinzufügen <span class="mif-plus pl-3 pr-2"></span>
                 </button>
               </span>
             </div>        
